@@ -1,0 +1,94 @@
+<html>
+    <head>
+        
+		<title>a2b</title>
+		<meta charset="utf-8" />
+        <meta charset="utf-8"/>
+
+        <!-- Chrome, Firefox OS and Opera -->
+        <meta name="theme-color" content="#303030">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#303030">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#303030">
+
+        <link rel="icon" href="logo.png" >
+
+        <link rel="manifest" href="manifest.html">
+        <meta name="viewport" content="width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+
+        <meta name="description" content="a2b - Get Delivered Anything Instantly">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAakmckdoSw41U9HtKorOg-WYdrmazA9Yo&libraries=places"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  
+        <link href="css/royal_preloader.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="style.css" rel="stylesheet" title="main-css">
+        
+    </head>
+    
+    <body>
+        
+        <nav class="navbar">
+            <ul>
+                <li class = "title" style="float: left ; padding-left: 100px ;" ><a href="index.html"><h1>a2b - Get Delivered Anything Instantly !</h1></a></li>
+              <li style=" margin-top: 26px ; margin-right: 26px ; " ><a href="#contact">Contact</a></li>
+              <li style=" margin-top: 26px ; " ><a href="#news">Help</a></li>
+              <li style=" margin-top: 26px ; " ><a href="#home">Rate Card</a></li>
+              <li style=" margin-top: 26px ; " ><a href="signup.html">Log In | Sign Up</a></li>
+            </ul>
+        </nav>
+        
+        <div id="map" >
+        </div>
+        
+        <div id="form">
+            <p>
+                <input type="text" class="address" id="pick-up" placeholder="Pick Up The Parcel From" />
+            </p>
+            <p>
+                <input type="text" class="address" id="drop" data-list="Ada, Java, JavaScript, Brainfuck, LOLCODE, Node.js, Ruby on Rails" placeholder="Drop The Parcel At" />
+            </p>
+            <p>
+                <button onclick="selectType()" class="continue" id="submitbutton" type="button" >Continue</button>
+            </p>
+        </div>
+        <div id="types" style="z-index: 2 ;">
+            <p>
+                <input type="text" class="address" id="pick-up" placeholder="Pick Up The Parcel From" />
+            </p>
+            <p>
+                <input type="text" class="address" id="drop" data-list="Ada, Java, JavaScript, Brainfuck, LOLCODE, Node.js, Ruby on Rails" placeholder="Drop The Parcel At" />
+            </p>
+            <p>
+                <button onclick="selectType()" class="continue" id="submitbutton" type="button" >Continue</button>
+            </p>
+        </div>
+        
+        
+        <script>
+            
+          
+            
+        </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAakmckdoSw41U9HtKorOg-WYdrmazA9Yo&callback=initMap">
+    </script>
+        <script type="text/javascript">
+            $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+            $('nav').addClass('shrink');
+            } else {
+            $('nav').removeClass('shrink');
+            }
+            });
+        </script>
+        
+    </body>
+    
+</html>
