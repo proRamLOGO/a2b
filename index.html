@@ -55,7 +55,16 @@
                 <input type="text" class="address" id="drop" data-list="Ada, Java, JavaScript, Brainfuck, LOLCODE, Node.js, Ruby on Rails" placeholder="Drop The Parcel At" />
             </p>
             <p>
-                <button onclick="selectType()" class="continue" id="submitbutton" type="button" >Continue</button>
+                <button onclick="_select('light')" class="typeB" id="lightB" type="button" >Light</button>
+            </p>
+            <p>
+                <button onclick="_select('medium')" class="typeB" id="medB" type="button" >Medium</button>
+            </p>
+            <p>
+                <button onclick="_select('heavy')" class="typeB" id="heavyB" type="button" >Heavy</button>
+            </p>
+            <p>
+                <button onclick="proceedToSelectType()" class="continue" id="submitbutton" type="button" >Continue</button>
             </p>
         </div>
         

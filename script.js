@@ -66,15 +66,49 @@ function smoothZoom (map, max, cnt) {
 }
 
 // Continue Action
-function selectType() {
+function proceedToSelectType() {
   var pickfrom = document.getElementById('pick-up') ;
   var dropat = document.getElementById('drop') ;
+  
+  // document.getElementById('drop').style.transition = "left 2s cubic-bezier(.42,-0.3,.78,1.25), top 2s cubic-bezier(.42,-0.3,.78,1.25)";
+  // document.getElementById('pick-up').style.transition = "left 2s cubic-bezier(.42,-0.3,.78,1.25), top 2s cubic-bezier(.42,-0.3,.78,1.25)";
+
   document.getElementById('pick-up').style.width = '45%' ;
   document.getElementById('drop').style.width = '45%' ;
+  document.getElementById('pick-up').style.color = 'white' ;
+  document.getElementById('drop').style.color = 'white'
+  document.getElementById('pick-up').style.height = '6%' ;
+  document.getElementById('drop').style.height = '6%' ;
+  document.getElementById('pick-up').style.backgroundColor = '#6F6F6F' ;
+  document.getElementById('drop').style.backgroundColor = '#6F6F6F' ;
   document.getElementById('pick-up').style.marginLeft = '-700px' ;
   document.getElementById('drop').style.marginLeft = '700px' ;
-  document.getElementById('drop').style.marginTop = '-104px' ;
+  document.getElementById('drop').style.marginTop = '-72px' ;
   document.getElementById('drop').setAttribute("disabled","disabled") ;
   document.getElementById('pick-up').setAttribute("disabled","disabled") ;
   
+  document.getElementById('lightB').style.display = 'inline' ;
+  document.getElementById('medB').style.display = 'inline' ;
+  document.getElementById('heavyB').style.display = 'inline' ;
+
+}
+
+function _select( type ) {
+
+  if ( type == 'light' ) {
+    document.getElementById('lightB').style.backgroundColor = '#5CF584' ;
+    document.getElementById('medB').style.backgroundColor = 'white' ;
+    document.getElementById('heavyB').style.backgroundColor = 'white' ;
+  }
+  else if ( type == 'medium' ) {
+    document.getElementById('lightB').style.backgroundColor = 'white' ;
+    document.getElementById('medB').style.backgroundColor = '#5CF584' ;
+    document.getElementById('heavyB').style.backgroundColor = 'white' ;
+  }
+  else if ( type == 'heavy' ) {
+    document.getElementById('lightB').style.backgroundColor = 'white' ;
+    document.getElementById('medB').style.backgroundColor = 'white' ;
+    document.getElementById('heavyB').style.backgroundColor = '#5CF584' ;
+  }
+
 }
