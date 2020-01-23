@@ -14,7 +14,6 @@ body {
 
 #form {
     background-color: #4f4f4f ;
-    z-index: 5 ;
     opacity: 90% ;
     width: 100%;
     margin-top: 380px ;
@@ -29,8 +28,7 @@ body {
 
 #types {
     background-color: #4f4f4f ;
-    z-index: 100 ;
-    opacity: 100% ;
+    visibility: hidden ;
     width: 100%;
     margin-top: -350px ;
     padding-top: 10px ;
@@ -211,6 +209,6 @@ li.title > h3 {
 *:focus {
     outline: none;
 }
-button.continue:hover {
+.continue:hover {
     background-color: #6f6f6f ;
 }

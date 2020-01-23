@@ -67,5 +67,14 @@ function smoothZoom (map, max, cnt) {
 
 // Continue Action
 function selectType() {
-   document.getElementById('types').style.opacity = "100%";
+  var pickfrom = document.getElementById('pick-up') ;
+  var dropat = document.getElementById('drop') ;
+  document.getElementById('pick-up').style.width = '45%' ;
+  document.getElementById('drop').style.width = '45%' ;
+  document.getElementById('pick-up').style.marginLeft = '-700px' ;
+  document.getElementById('drop').style.marginLeft = '700px' ;
+  document.getElementById('drop').style.marginTop = '-104px' ;
+  document.getElementById('drop').setAttribute("disabled","disabled") ;
+  document.getElementById('pick-up').setAttribute("disabled","disabled") ;
+  
 }
