@@ -11,7 +11,7 @@ var map, infoWindow;
 function initMap() {
 map = new google.maps.Map(document.getElementById('map'), {
   center: {lat: 28.7118383, lng: 77.0851576},
-  zoom: 19
+  zoom: 6
 });
 
 infoWindow = new google.maps.InfoWindow;
@@ -32,6 +32,7 @@ if (navigator.geolocation) {
       icon:'marker.png'
     });
     marker.setMap(map);
+    smoothZoom(map, 20, map.getZoom());
     map.setCenter(pos);
   }, function() {
     handleLocationError(true, infoWindow, map.getCenter());
@@ -50,6 +51,19 @@ infoWindow.setContent(browserHasGeolocation ?
 infoWindow.open(map);
 }
 
+// the smooth zoom function
+function smoothZoom (map, max, cnt) {
+    if (cnt >= max) {
+        return;
+    }
+    else {
+        z = google.maps.event.addListener(map, 'zoom_changed', function(event){
+            google.maps.event.removeListener(z);
+            smoothZoom(map, max, cnt + 1);
+        });
+        setTimeout(function(){map.setZoom(cnt)}, 5); // 80ms is what I found to work well on my system -- it might not work well on all systems
+    }
+}
 
 // Continue Action
 function selectType() {
