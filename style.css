@@ -246,7 +246,7 @@ li.title > h3 {
     }
 }
 
-.typeB {
+button.typeB {
     width : 20% ;
     height: 10% ;
     display: none;
@@ -266,6 +266,7 @@ button.typeB:hover {
   transition-property: transform;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -280,4 +281,13 @@ button.typeB:hover {
 #heavyB {
     margin-top : -117px ;
     margin-left: 800px ;
+}
+
+#label {
+
+    display: none;
+    font-family: 'Roboto' ;
+    font-size: 18px ;
+    color: white ;
+
 }

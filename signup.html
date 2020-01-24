@@ -23,6 +23,7 @@
 
         <script type="text/javascript" src="script.js"></script>
         
+        <script type="text/javascript" src="login_register.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="style.css" rel="stylesheet" title="main-css">
@@ -58,6 +59,9 @@
         <div class="form-group">
         	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
         </div>
+        <div class="form-group">
+        	<input type="" class="form-control" name="username" placeholder="User Name" required="required">
+        </div>
 		<div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Password" required="required">
         </div>
@@ -68,7 +72,7 @@
 			<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
 		</div>
 		<div class="form-group">
-            <button type="submit" class="btn">Register Now</button>
+            <button onclick="newUser(username, firstName, lastName, email, password)" type="submit" class="btn">Register Now</button>
         </div>
     </form>
 	<div class="signin" >Already have an account? <a href="#">Sign in</a></div>

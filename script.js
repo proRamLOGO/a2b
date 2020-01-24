@@ -87,28 +87,39 @@ function proceedToSelectType() {
   document.getElementById('drop').setAttribute("disabled","disabled") ;
   document.getElementById('pick-up').setAttribute("disabled","disabled") ;
   
+  document.getElementById('label').style.display = 'inline' ;
   document.getElementById('lightB').style.display = 'inline' ;
   document.getElementById('medB').style.display = 'inline' ;
   document.getElementById('heavyB').style.display = 'inline' ;
+  document.getElementById('form').style.marginTop = '340px' ;
 
 }
 
 function _select( type ) {
 
   if ( type == 'light' ) {
-    document.getElementById('lightB').style.backgroundColor = '#5CF584' ;
+    document.getElementById('lightB').style.backgroundColor = '#5E635F' ;
     document.getElementById('medB').style.backgroundColor = 'white' ;
     document.getElementById('heavyB').style.backgroundColor = 'white' ;
+    document.getElementById('lightB').style.color = 'white' ;
+    document.getElementById('medB').style.color = 'black' ;
+    document.getElementById('heavyB').style.color = 'black' ;
   }
   else if ( type == 'medium' ) {
     document.getElementById('lightB').style.backgroundColor = 'white' ;
-    document.getElementById('medB').style.backgroundColor = '#5CF584' ;
+    document.getElementById('medB').style.backgroundColor = '#5E635F' ;
     document.getElementById('heavyB').style.backgroundColor = 'white' ;
+    document.getElementById('lightB').style.color = 'black' ;
+    document.getElementById('medB').style.color = 'white' ;
+    document.getElementById('heavyB').style.color = 'black' ;
   }
   else if ( type == 'heavy' ) {
     document.getElementById('lightB').style.backgroundColor = 'white' ;
     document.getElementById('medB').style.backgroundColor = 'white' ;
-    document.getElementById('heavyB').style.backgroundColor = '#5CF584' ;
+    document.getElementById('heavyB').style.backgroundColor = '#5E635F' ;
+    document.getElementById('lightB').style.color = 'black' ;
+    document.getElementById('medB').style.color = 'black' ;
+    document.getElementById('heavyB').style.color = 'white' ;
   }
 
 }
